@@ -1,0 +1,120 @@
+% resume.tex
+% Chrisna Aing
+%
+% Inspired by:
+% Matthew Boedicker (original author)
+% David Grant
+% Todd Miller
+
+\documentclass[letterpaper, 12pt]{article}
+
+% Some helpful packages.
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Document layout stuff.
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\newcommand{\resumeheading}[1]
+{\fcolorbox{black}{lightgray}{\begin{minipage}{6.4in}
+    % "vphantom" used to fix vertical box spacing
+    \textbf{\large #1 \vphantom{p\^{E}}}\end{minipage}}\vspace{6pt}
+}
+
+\newcommand{\educationsubsection}[3]
+{\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} l r}
+    \textbf{#1} & #2\\
+    #3\\
+\end{tabular*}}
+
+\newcommand{\worksubsection}[4]
+{\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} l r}
+    \textbf{#1} & #2\\
+    #3 (#4)\\
+\end{tabular*}}
+
+\newenvironment{resumeitemize}
+{\begin{itemize}
+    \vspace{-3pt}
+    \setlength{\itemsep}{2pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\large Chrisna K. Aing}\\
+    \href{mailto:chrisna@chrisna.org}{chrisna@chrisna.org}
+\end{center}
+
+\resumeheading{Work Experience}
+    \worksubsection
+        {iOS Engineer}
+        {2016--2018}
+        {Google}
+        {Mountain View, CA}
+    \begin{resumeitemize}
+        \item{Served as the technical lead of the Google Express iOS
+            application.}
+        \item{Maintained and implemented new features across every screen,
+            including comprehensive analytics reporting, new shopping cart
+            functionality, user interface updates to product pages, and more.}
+    \end{resumeitemize}
+    \worksubsection
+        {iOS Engineer}
+        {2015--2016}
+        {Udacity}
+        {Mountain View, CA}
+    \begin{resumeitemize}
+        \item{Was the primary maintainer of and contributor to Udacity's iOS
+            application.}
+        \item{Rewrote networking and model layers in Swift to interact with
+            views and view controllers written in Objective-C and updated the
+            classroom's user interface.}
+        \item{Set up continuous integration with unit tests, snapshot tests,
+            code signing, and submission to TestFlight and the App Store.}
+    \end{resumeitemize}
+    \worksubsection
+        {Course Manager}
+        {2014--2015}
+        {Udacity}
+        {Mountain View, CA}
+    \begin{resumeitemize}
+        \item{Coached students through software engineering courses via 1-on-1
+            online chat, email, and video conferences.}
+        \item{Implemented and contributed to internal tools and scripts.}
+        \item{Reviewed several courses and participated in course production.}
+    \end{resumeitemize}
+    \worksubsection
+        {Business Technology Associate Consultant}
+        {2010--2013}
+        {ZS Associates}
+        {Chicago, IL and New York, NY}
+    \begin{resumeitemize}
+        \item{Performed requirements gathering, development, review, and
+            testing of Oracle- and Teradata-based data warehouse and reporting
+            solutions for large medical devices and pharmaceutical clients.}
+    \end{resumeitemize}
+
+\resumeheading{Education}
+    \educationsubsection
+        {Carleton College}
+        {2006--2010}
+        {Northfield, MN}
+    \begin{resumeitemize}
+        \item{Major: Bachelor of Arts in Mathematics, \emph{magna cum laude}}
+        \item{GPA: 3.76; GRE: 169 Q, 167 V, 4.5 AW}
+    \end{resumeitemize}
+
+\resumeheading{Skills}
+    \begin{resumeitemize}
+        \item{Experienced: Objective-C, Swift, and SQL}
+        \item{Familiar: Python and JavaScript}
+    \end{resumeitemize}
+
+\end{document}
